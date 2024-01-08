@@ -22,3 +22,5 @@ primary_region = "nrt"
 [build]
   builder = "paketobuildpacks/builder:base"
   buildpacks = ["gcr.io/paketo-buildpacks/nodejs"]
+  image = "flyio/hellofly:latest"
+  dockerfile = "Dockerfile.test"
