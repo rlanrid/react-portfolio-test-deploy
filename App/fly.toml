@@ -6,6 +6,8 @@
 app = "react-portfolio-test-deploy"
 primary_region = "nrt"
 
+[build]
+
 [http_service]
   internal_port = 8080
   force_https = true
@@ -18,9 +20,3 @@ primary_region = "nrt"
   cpu_kind = "shared"
   cpus = 1
   memory_mb = 1024
-
-[build]
-  builder = "paketobuildpacks/builder:base"
-  buildpacks = ["gcr.io/paketo-buildpacks/nodejs"]
-  image = "flyio/hellofly:latest"
-  dockerfile = "Dockerfile.test"
