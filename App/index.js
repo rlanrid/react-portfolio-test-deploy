@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", require('./server/router/user.js'));
 app.use("/api/comment", require('./server/router/comment.js'));
 
-app.listen({ port, host: '0.0.0.0' }, () => {
+app.listen(port, "0.0.0.0", () => {
     mongoose
         .connect(config.mongoURI)
         .then(() => {
