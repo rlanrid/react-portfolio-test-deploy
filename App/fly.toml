@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for react-portfolio-test-deploy on 2024-01-08T13:04:04+09:00
+# fly.toml app configuration file generated for react-porfolio-test-deploy on 2024-01-08T15:46:23+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "react-portfolio-test-deploy"
+app = "react-porfolio-test-deploy"
 primary_region = "nrt"
 
 [build]
@@ -19,4 +19,4 @@ primary_region = "nrt"
 [[vm]]
   cpu_kind = "shared"
   cpus = 1
-  memory_mb = 1024
+  memory_mb = 512
