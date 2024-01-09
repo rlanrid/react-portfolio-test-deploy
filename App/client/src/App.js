@@ -19,6 +19,8 @@ const App = () => {
     smooth();
     link();
 
+    console.log(process.env.REACT_APP_API_KEY)
+
     setTimeout(() => {
       menu();
     }, 6000)

@@ -4,5 +4,8 @@ App/server/package-lock.json
 App/server/config/dev.js
 App/client/node_modules
 App/client/package-lock.json
+
 .env
 .env.local
+App/client/.env
+App/client/.env.local

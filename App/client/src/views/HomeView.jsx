@@ -43,24 +43,7 @@ const HomeView = () => {
     return (
         <>
             {loading ? (
-                // <Loading />
-                <div className='fade-in' >
-                    <Progress />
-                    <Header toggleModal={toggleModal} />
-                    <Main>
-                        <Opening />
-                        <Intro appear={appear} />
-                        <Port arrowImg={ArrowImg} arrowAlt="화살표이미지" />
-                        <More arrowImg={ArrowImg} arrowAlt="화살표이미지" mouse={mouse} />
-                        <About arrowImg={ArrowImg} arrowAlt="화살표이미지" />
-                        <Stack arrowImg={ArrowImg} arrowAlt="화살표이미지" />
-                        <Contact arrowImg={ArrowImg} arrowAlt="화살표이미지" />
-                        <Comment arrowImg={ArrowImg} arrowAlt="화살표이미지" toggleModal={toggleModal} />
-                    </Main>
-                    <Footer />
-                    <Modal show={showModal} toggleModal={toggleModal} />
-                    <Line />
-                </div>
+                <Loading />
             ) : (
                 <div className='fade-in' >
                     <Progress />
