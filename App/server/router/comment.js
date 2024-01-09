@@ -51,16 +51,14 @@ router.post("/edit", (req, res) => {
         uid: req.body.uid,
     }
 
-    if (uid) {
-        Comment.findOneAndUpdate({ _id: req.body.commentId }, { $set: temp })
-            .exec()
-            .then(() => {
-                return res.status(200).json({ success: true })
-            })
-            .catch((err) => {
-                return res.status(400).json({ success: false })
-            })
-    }
+    Comment.findOneAndUpdate({ _id: req.body.commentId }, { $set: temp })
+        .exec()
+        .then(() => {
+            return res.status(200).json({ success: true })
+        })
+        .catch((err) => {
+            return res.status(400).json({ success: false })
+        })
 
 })
 
