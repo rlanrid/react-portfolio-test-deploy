@@ -17,10 +17,10 @@ const App = () => {
   useEffect(() => {
     menubar();
     smooth();
+    link();
 
     setTimeout(() => {
       menu();
-      link();
     }, 6000)
 
     firebase.auth().onAuthStateChanged((userInfo) => {

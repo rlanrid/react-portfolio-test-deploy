@@ -146,10 +146,54 @@ GSAP(그린 소켓 애니메이션 플랫폼)은 JavaScript로 작성된 애니�
     </p>
 
     - 문제 원인
+    
     경로 설정 문제
 
     - 문제 해결
+    
     server파일의 옳바른 경로 설정
+</details>
+<br/>
+<details>
+    <summary>댓글 업데이트 문제</summary>
+    <p>
+        댓글 기능을 구현했는데, 화면에 바로 업데이트되지 않고 새로고침을 해야하는 문제가 있었습니다.
+    </p>
+
+    - 문제 원인
+
+    비동기적으로 데이터를 받아오기 때문에 업데이트가 늦어지는 것
+
+        axios
+            .post("/api/comment/submit", body)
+            .then((res) => {
+                if (res.data.success) {
+                    alert("댓글 작성이 성공하였습니다.");
+
+                    const updatedCommentList = [comment, ...commentList];
+                    setCommentList(updatedCommentList)
+                    setComment("");
+                } else {
+                    alert("댓글 작성이 실패했습니다.")
+                }
+            })
+
+    - 문제 해결
+
+    서버에 댓글을 새로 요청해 받아오면 해결
+
+        axios
+            .post("/api/comment/list")
+            .then((res) => {
+                if (res.data.success) {
+                    setCommentList([...res.data.commentList]);
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+
+        setComment("");
 </details>
 
 

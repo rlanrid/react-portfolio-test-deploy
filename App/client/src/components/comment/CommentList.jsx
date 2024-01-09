@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CommentContent from './CommentContent';
 import { useSelector } from 'react-redux';
+import CommentWrite from '../comment/CommentWrite'
 
 const CommentList = (props) => {
     const [commentList, setCommentList] = useState([]);
@@ -49,16 +50,20 @@ const CommentList = (props) => {
         } else {
             getCommentList();
         }
-    }, [user, props.state, commentList])
+    }, [user, props.state])
 
     return (
-        <div className="comment__list">
-            {commentList.map((comment, idx) => {
-                return (
-                    <CommentContent comment={comment} key={idx} />
-                )
-            })}
-        </div>
+        <>
+            <CommentWrite toggleModal={props.toggleModal} setCommentList={setCommentList} />
+            <div className="comment__list">
+                {commentList.map((comment, idx) => {
+                    return (
+                        <CommentContent comment={comment} key={idx} />
+                    )
+                })}
+            </div>
+        </>
+
     )
 }
 

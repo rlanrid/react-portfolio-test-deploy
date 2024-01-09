@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { LuClipboardList } from "react-icons/lu";
-
-import CommentWrite from '../comment/CommentWrite'
 import CommentList from '../comment/CommentList'
 
 const Comment = (props) => {
@@ -34,8 +32,7 @@ const Comment = (props) => {
                     <div className="title__line"></div>
                 </div>
                 <div className="comment__cont">
-                    <CommentWrite toggleModal={props.toggleModal} />
-                    <CommentList state={isFilter} />
+                    <CommentList state={isFilter} toggleModal={props.toggleModal} />
                 </div>
             </div>
         </section>

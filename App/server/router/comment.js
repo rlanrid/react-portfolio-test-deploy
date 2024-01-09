@@ -6,6 +6,7 @@ const { User } = require("../model/User.js");
 
 router.post("/submit", async (req, res) => {
     let temp = req.body;
+
     try {
         const userInfo = await User.findOne({ uid: req.body.uid }).exec();
 
@@ -18,7 +19,7 @@ router.post("/submit", async (req, res) => {
         } else {
             const NewComment = new Comment(temp);
             await NewComment.save();
-            return res.status(200).json({ success: true })
+            return res.status(200).json({ success: true });
         }
 
     } catch (err) {
@@ -49,14 +50,18 @@ router.post("/edit", (req, res) => {
         comment: req.body.comment,
         uid: req.body.uid,
     }
-    Comment.findOneAndUpdate({ _id: req.body.commentId }, { $set: temp })
-        .exec()
-        .then(() => {
-            return res.status(200).json({ success: true })
-        })
-        .catch((err) => {
-            return res.status(400).json({ success: false })
-        })
+
+    if (uid) {
+        Comment.findOneAndUpdate({ _id: req.body.commentId }, { $set: temp })
+            .exec()
+            .then(() => {
+                return res.status(200).json({ success: true })
+            })
+            .catch((err) => {
+                return res.status(400).json({ success: false })
+            })
+    }
+
 })
 
 router.post("/delete", (req, res) => {

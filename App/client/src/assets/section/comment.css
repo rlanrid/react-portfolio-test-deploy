@@ -41,7 +41,6 @@
 
 .comment__cont {
     width: 100%;
-    border-bottom: 1px solid var(--dark-grey);
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -49,7 +48,6 @@
 
 .comment__form {
     width: 100%;
-    height: 200px;
     border: 1px solid var(--gainsboro);
     padding: 30px;
     background-color: var(--primary-color);
@@ -62,9 +60,19 @@
     padding: 15px;
     font-family: var(--mainfont-chosun);
     font-weight: 300;
+    margin-bottom: 2vw;
 }
 
-.comment__form input:focus {
+.comment__form textarea {
+    width: 100%;
+    display: block;
+    resize: none;
+    padding: 15px;
+    font-family: var(--mainfont-chosun);
+    font-weight: 300;
+}
+
+.comment__form textarea:focus {
     outline: none;
 }
 

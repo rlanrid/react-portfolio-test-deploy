@@ -8,6 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* 
+    background: linear-gradient(45deg, #151515 0%, #3c3c3c 20%, #c0c0c0 40%, #cbcbcb 60%, #3c3c3c 80%, #151515 100%);
+    background-size: 600%;
+    background-position: 0% 100%;
+    -webkit-animation: gradient 7s ease-in-out infinite;
+    animation: gradient 7s ease-in-out infinite; */
 }
 
 .loading {

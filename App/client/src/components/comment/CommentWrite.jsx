@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
 
-const CommentWrite = () => {
-    const [comment, setComment] = useState("");
+const CommentWrite = (props) => {
+    const { setCommentList } = props;
     const [isOverLimit, setIsOverLimit] = useState(false);
+
+    const [comment, setComment] = useState("");
+    const [youName, setYouName] = useState("");
 
     const user = useSelector((state) => state.user);
 
@@ -25,6 +28,7 @@ const CommentWrite = () => {
         }
 
         let body = {
+            name: youName,
             comment: comment,
             uid: user.uid,
         }
@@ -34,6 +38,19 @@ const CommentWrite = () => {
             .then((res) => {
                 if (res.data.success) {
                     alert("댓글 작성이 성공하였습니다.");
+
+                    // API를 통해 새로운 데이터를 받아옵니다.
+                    axios.post("/api/comment/list")
+                        .then((res) => {
+                            if (res.data.success) {
+                                setCommentList([...res.data.commentList]);
+                            }
+                        })
+                        .catch((err) => {
+                            console.log(err);
+                        });
+
+                    setComment("");
                 } else {
                     alert("댓글 작성이 실패했습니다.")
                 }
@@ -53,21 +70,39 @@ const CommentWrite = () => {
 
     return (
         <div className="comment__form">
-            <input
-                placeholder="Leave a Comment"
-                text="text"
-                value={comment}
-                onChange={(e) => { handleInputChange(e) }}
-            />
-            <p className={isOverLimit ? 'comment__length limit' : 'comment__length'}>
-                <i>{comment.length}</i> / 100
-            </p>
-            <button
-                onClick={(e) => {
-                    SubmitHandler(e)
-                }}
-            >Write</button>
-        </div>
+            <form>
+                {user.accessToken ? (
+                    ""
+                ) : (
+                    <>
+                        <label htmlFor="yourName" className='blind'>이름</label>
+                        <input
+                            id="yourName"
+                            placeholder="Name"
+                            type='text'
+                            value={youName}
+                            onChange={(e) => { setYouName(e.currentTarget.value) }}
+                        />
+                    </>
+                )
+                }
+
+                <textarea
+                    placeholder="Leave a Comment"
+                    type="text"
+                    value={comment}
+                    onChange={(e) => { handleInputChange(e) }}
+                />
+                <p className={isOverLimit ? 'comment__length limit' : 'comment__length'}>
+                    <i>{comment.length}</i> / 100
+                </p>
+                <button
+                    onClick={(e) => {
+                        SubmitHandler(e)
+                    }}
+                >Write</button>
+            </form >
+        </div >
     )
 }
 
