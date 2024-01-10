@@ -53,23 +53,23 @@
     background-color: var(--primary-color);
 }
 
-.comment__form input {
-    width: 100%;
-    display: block;
-    resize: none;
-    padding: 15px;
-    font-family: var(--mainfont-chosun);
-    font-weight: 300;
-    margin-bottom: 2vw;
+.comment__form form {
+    position: relative;
 }
 
+.comment__form input {
+    margin-bottom: 30px;
+}
+
+.comment__form input,
 .comment__form textarea {
-    width: 100%;
+    width: 40%;
     display: block;
     resize: none;
     padding: 15px;
     font-family: var(--mainfont-chosun);
     font-weight: 300;
+    height: 50px;
 }
 
 .comment__form textarea:focus {
@@ -80,7 +80,7 @@
     font-family: var(--mainfont-abel);
     font-size: 1rem;
     color: var(--gainsboro);
-    text-align: right;
+    margin-top: 5px;
 }
 
 .comment__length.limit i {
@@ -89,6 +89,9 @@
 }
 
 .comment__form button {
+    position: absolute;
+    right: 0;
+    bottom: 26px;
     padding: 5px;
     background-color: transparent;
     color: var(--gainsboro);
