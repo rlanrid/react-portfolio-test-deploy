@@ -20,6 +20,8 @@ import Line from '../components/contents/Line'
 import Modal from '../components/section/Modal'
 import Loading from '../components/contents/Loading'
 import { gsapEffect } from '../utils/gsapEffect'
+import { menubar } from '../utils/menubar'
+import { menu } from '../utils/menu'
 
 
 const HomeView = () => {
@@ -37,6 +39,9 @@ const HomeView = () => {
 
         if (loading === false) {
             gsapEffect();
+            menubar();
+            menu();
+            menubar();
         }
     }, [loading]);
 
