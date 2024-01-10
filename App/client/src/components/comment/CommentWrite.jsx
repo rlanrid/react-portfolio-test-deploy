@@ -79,7 +79,7 @@ const CommentWrite = (props) => {
                         <label htmlFor="yourName" className='blind'>이름</label>
                         <input
                             id="yourName"
-                            placeholder="Name"
+                            placeholder="이름"
                             type='text'
                             value={youName}
                             onChange={(e) => { setYouName(e.currentTarget.value) }}
@@ -91,7 +91,7 @@ const CommentWrite = (props) => {
                     <label htmlFor="yourComment" className='blind'>댓글</label>
                     <input
                         id='yourComment'
-                        placeholder="Leave a Comment"
+                        placeholder="댓글을 남겨주세요."
                         type="text"
                         value={comment}
                         onChange={(e) => { handleInputChange(e) }}
