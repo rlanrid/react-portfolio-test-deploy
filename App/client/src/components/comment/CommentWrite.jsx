@@ -51,6 +51,7 @@ const CommentWrite = (props) => {
                         });
 
                     setComment("");
+                    setYouName("");
                 } else {
                     alert("댓글 작성이 실패했습니다.")
                 }
