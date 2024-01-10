@@ -61,8 +61,7 @@
     margin-bottom: 30px;
 }
 
-.comment__form input,
-.comment__form textarea {
+.comment__form input {
     width: 40%;
     display: block;
     resize: none;
@@ -88,10 +87,20 @@
     font-weight: 800;
 }
 
+.comment__box {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.comment__box input {
+    width: 80%;
+    margin-bottom: 0;
+}
+
 .comment__form button {
-    position: absolute;
-    right: 0;
-    bottom: 26px;
+    margin-left: 10px;
     padding: 5px;
     background-color: transparent;
     color: var(--gainsboro);
@@ -232,14 +241,43 @@
     .list .co__title {
         font-size: 13px;
     }
+
+    .comment__form input {
+        width: 80%;
+    }
+
+    .comment__box {
+        width: 100%;
+    }
 }
 
 @media(max-width: 780px) {
     .comment__list {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 
+@media(max-width: 480px) {
+    .comment__form input {
+        width: 100%;
+    }
 
+    .comment__box {
+        position: relative;
+    }
+
+    .comment__box input {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .comment__form button {
+        margin-left: 0;
+        position: absolute;
+        right: 0;
+        bottom: -25px;
+        padding: 3px;
+    }
 }
 
 

@@ -71,6 +71,7 @@ const CommentWrite = (props) => {
     return (
         <div className="comment__form">
             <form>
+
                 {user.accessToken ? (
                     ""
                 ) : (
@@ -86,21 +87,24 @@ const CommentWrite = (props) => {
                     </>
                 )
                 }
-
-                <textarea
-                    placeholder="Leave a Comment"
-                    type="text"
-                    value={comment}
-                    onChange={(e) => { handleInputChange(e) }}
-                />
+                <div className="comment__box">
+                    <label htmlFor="yourComment" className='blind'>댓글</label>
+                    <input
+                        id='yourComment'
+                        placeholder="Leave a Comment"
+                        type="text"
+                        value={comment}
+                        onChange={(e) => { handleInputChange(e) }}
+                    />
+                    <button
+                        onClick={(e) => {
+                            SubmitHandler(e)
+                        }}
+                    >Write</button>
+                </div>
                 <p className={isOverLimit ? 'comment__length limit' : 'comment__length'}>
                     <i>{comment.length}</i> / 100
                 </p>
-                <button
-                    onClick={(e) => {
-                        SubmitHandler(e)
-                    }}
-                >Write</button>
             </form >
         </div >
     )
