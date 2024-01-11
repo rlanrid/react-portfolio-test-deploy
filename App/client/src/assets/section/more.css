@@ -53,6 +53,7 @@
     width: 37.5%;
     font-size: 20px;
     font-family: var(--mainfont-gmarket);
+    color: var(--gainsboro);
 }
 
 .more__item .type {
