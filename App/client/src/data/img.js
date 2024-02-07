@@ -6,6 +6,7 @@ import portImg1 from "../assets/img/moviesite.jpg"
 import portImg2 from "../assets/img/TDsite.jpg"
 import portImg3 from "../assets/img/youtubesite.jpg"
 import portImg4 from "../assets/img/nodesite.png"
+import portImg5 from "../assets/img/threadsite.jpg"
 
 import MouseImg1 from "../assets/img/quizmoviesite.png"
 import MouseImg2 from "../assets/img/vitesite.png"
@@ -47,6 +48,10 @@ export const PortImgs = [
     {
         src: portImg4,
         alt: "포폴이미지4"
+    },
+    {
+        src: portImg5,
+        alt: "포폴이미지5"
     },
 ];
 

@@ -45,6 +45,16 @@ export const PortInfo = [
         linkImg: LinkImg,
         linkAlt: "링크화살표",
     },
+    {
+        title: "Thread Using Next.js",
+        date: "2024",
+        skill: "Next.js",
+        src: PortImgs[4].src,
+        alt: PortImgs[4].alt,
+        link: "https://github.com/rlanrid/thread-portfolio",
+        linkImg: LinkImg,
+        linkAlt: "링크화살표",
+    },
 ]
 
 export const moreInfo = [
