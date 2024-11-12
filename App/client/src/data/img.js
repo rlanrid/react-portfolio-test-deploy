@@ -7,11 +7,14 @@ import portImg2 from "../assets/img/TDsite.jpg"
 import portImg3 from "../assets/img/youtubesite.jpg"
 import portImg4 from "../assets/img/nodesite.png"
 import portImg5 from "../assets/img/threadsite.jpg"
+import portImg6 from "../assets/img/portImg6.png"
 
 import MouseImg1 from "../assets/img/quizmoviesite.png"
 import MouseImg2 from "../assets/img/vitesite.png"
 import MouseImg3 from "../assets/img/webstandardsite.png"
 import MouseImg4 from "../assets/img/academysite.png"
+import MouseImg5 from "../assets/img/mouseImg5.png"
+import MouseImg6 from "../assets/img/mouseImg6.png"
 
 import stackIcon1 from "../assets/img/icon__html5.png"
 import stackIcon2 from "../assets/img/icon__css3.png"
@@ -27,100 +30,112 @@ import stackIcon11 from "../assets/img/icon__vscode.png"
 import stackIcon12 from "../assets/img/icon__figma.png"
 
 export const ImgCol = {
-    RightArrowImg: RightArrowImg,
-    noiseImg: noiseImg,
-    SmallLinkImg: SmallLinkImg,
+  RightArrowImg: RightArrowImg,
+  noiseImg: noiseImg,
+  SmallLinkImg: SmallLinkImg,
 }
 
 export const PortImgs = [
-    {
-        src: portImg1,
-        alt: "포폴이미지1"
-    },
-    {
-        src: portImg2,
-        alt: "포폴이미지2"
-    },
-    {
-        src: portImg3,
-        alt: "포폴이미지3"
-    },
-    {
-        src: portImg4,
-        alt: "포폴이미지4"
-    },
-    {
-        src: portImg5,
-        alt: "포폴이미지5"
-    },
+  {
+    src: portImg1,
+    alt: "포폴이미지1"
+  },
+  {
+    src: portImg2,
+    alt: "포폴이미지2"
+  },
+  {
+    src: portImg3,
+    alt: "포폴이미지3"
+  },
+  {
+    src: portImg4,
+    alt: "포폴이미지4"
+  },
+  {
+    src: portImg5,
+    alt: "포폴이미지5"
+  },
+  {
+    src: portImg6,
+    alt: "포폴이미지6"
+  },
 ];
 
 export const MouseImgs = [
-    {
-        src: MouseImg1,
-        alt: "영화퀴즈게임사이트"
-    },
-    {
-        src: MouseImg2,
-        alt: "영화퀴즈게임사이트"
-    },
-    {
-        src: MouseImg3,
-        alt: "영화퀴즈게임사이트"
-    },
-    {
-        src: MouseImg4,
-        alt: "영화퀴즈게임사이트"
-    },
+  {
+    src: MouseImg1,
+    alt: "영화퀴즈게임사이트"
+  },
+  {
+    src: MouseImg2,
+    alt: "Vite사이트"
+  },
+  {
+    src: MouseImg3,
+    alt: "웹표준사이트"
+  },
+  {
+    src: MouseImg4,
+    alt: "학원사이트"
+  },
+  {
+    src: MouseImg5,
+    alt: "프롬토피아"
+  },
+  {
+    src: MouseImg6,
+    alt: "Ai채팅"
+  },
 ]
 
 export const StackImgs = [
-    {
-        src: stackIcon1,
-        alt: "HTML5아이콘"
-    },
-    {
-        src: stackIcon2,
-        alt: "CSS3아이콘"
-    },
-    {
-        src: stackIcon3,
-        alt: "Sass아이콘"
-    },
-    {
-        src: stackIcon4,
-        alt: "JavaScript아이콘"
-    },
-    {
-        src: stackIcon5,
-        alt: "Jquery아이콘"
-    },
-    {
-        src: stackIcon6,
-        alt: "React아이콘"
-    },
-    {
-        src: stackIcon7,
-        alt: "Nodejs아이콘"
-    },
-    {
-        src: stackIcon8,
-        alt: "mongoDB아이콘"
-    },
-    {
-        src: stackIcon9,
-        alt: "PHP아이콘"
-    },
-    {
-        src: stackIcon10,
-        alt: "Json아이콘"
-    },
-    {
-        src: stackIcon11,
-        alt: "VScode아이콘"
-    },
-    {
-        src: stackIcon12,
-        alt: "Figma아이콘"
-    },
+  {
+    src: stackIcon1,
+    alt: "HTML5아이콘"
+  },
+  {
+    src: stackIcon2,
+    alt: "CSS3아이콘"
+  },
+  {
+    src: stackIcon3,
+    alt: "Sass아이콘"
+  },
+  {
+    src: stackIcon4,
+    alt: "JavaScript아이콘"
+  },
+  {
+    src: stackIcon5,
+    alt: "Jquery아이콘"
+  },
+  {
+    src: stackIcon6,
+    alt: "React아이콘"
+  },
+  {
+    src: stackIcon7,
+    alt: "Nodejs아이콘"
+  },
+  {
+    src: stackIcon8,
+    alt: "mongoDB아이콘"
+  },
+  {
+    src: stackIcon9,
+    alt: "PHP아이콘"
+  },
+  {
+    src: stackIcon10,
+    alt: "Json아이콘"
+  },
+  {
+    src: stackIcon11,
+    alt: "VScode아이콘"
+  },
+  {
+    src: stackIcon12,
+    alt: "Figma아이콘"
+  },
 ]
